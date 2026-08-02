@@ -32,9 +32,13 @@ const register = async (req,res)=>{
 
     res.status(201).json({
 
-        message:"User Registered",
+        message:"User Registered successfully",
 
-        user
+        user:{
+            id:user_id,
+            name:user.name,
+            email:user.email
+        }
 
     });
 
